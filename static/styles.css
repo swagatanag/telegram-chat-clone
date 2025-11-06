@@ -1,0 +1,245 @@
+/* ==== Global Styles ==== */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e6ebf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* ==== Login Page ==== */
+#loginPage {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+#loginPage input {
+  width: 250px;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  margin-top: 10px;
+  font-size: 16px;
+  transition: border 0.2s;
+}
+
+#loginPage input:focus {
+  border-color: #4a90e2;
+}
+
+#startChat {
+  margin-top: 15px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#startChat:hover {
+  background: #357abd;
+}
+
+/* ==== Chat Page Layout ==== */
+#chatPage {
+  width: 80%;
+  height: 85vh;
+  display: flex;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ==== Sidebar ==== */
+#sidebar {
+  width: 25%;
+  background: #f1f3f6;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#sidebar h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 20px;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 5px;
+}
+
+#groupList {
+  list-style: none;
+  overflow-y: auto;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+#groupList li {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: #e6ebf5;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#groupList li:hover {
+  background: #d0def0;
+}
+
+#createGroup, #newGroup {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+#newGroup {
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* ==== Chat Box ==== */
+#chatBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 15px;
+  position: relative;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+
+#messages div {
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 10px;
+  background: #f1f3f6;
+  width: fit-content;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+/* Right-align your own messages */
+#messages div.self {
+  background: #4a90e2;
+  color: white;
+  margin-left: auto;
+}
+
+/* Typing indicator */
+#typingStatus {
+  height: 20px;
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Input bar */
+#messageInput {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  outline: none;
+  transition: 0.2s;
+}
+
+#messageInput:focus {
+  border-color: #4a90e2;
+}
+
+#sendBtn {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: 0.2s;
+}
+
+#sendBtn:hover {
+  background: #357abd;
+}
+
+/* ==== Scrollbar Styling ==== */
+#groupList::-webkit-scrollbar,
+#messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#groupList::-webkit-scrollbar-thumb,
+#messages::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+}
+/* ==== Friends & Settings Section ==== */
+#sidebarBottom {
+  border-top: 2px solid #ddd;
+  padding-top: 15px;
+}
+
+#friendList {
+  list-style: none;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#friendList li {
+  background: #e6ebf5;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+#friendList li:hover {
+  background: #d0def0;
+}
+
+#sidebarActions {
+  display: flex;
+  justify-content: space-between;
+}
+
+#sidebarActions button {
+  flex: 1;
+  margin: 5px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+#sidebarActions button:hover {
+  background: #357abd;
+}

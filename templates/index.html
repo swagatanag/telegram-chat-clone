@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Chat Clone</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div id="loginPage">
+    <h2>Enter your name</h2>
+    <input id="username" placeholder="Your name" />
+    <button id="startChat">Start Chat</button>
+
+  </div>
+
+  <div id="chatPage" style="display:none;">
+    <div id="sidebar">
+  <div id="sidebarTop">
+    <h3>Groups</h3>
+    <ul id="groupList"></ul>
+
+    <input id="newGroup" placeholder="New group name" />
+    <button id="createGroup">Create Group</button>
+  </div>
+
+  <div id="sidebarBottom">
+    <h3>Friends</h3>
+    <ul id="friendList">
+      <!-- Will be updated dynamically later -->
+      <li>Coming soon...</li>
+    </ul>
+
+    <div id="sidebarActions">
+      <button id="settingsBtn">⚙️ Settings</button>
+      <button id="logoutBtn">🚪 Logout</button>
+    </div>
+  </div>
+</div>
+
+
+    <div id="chatBox">
+      <div id="messages"></div>
+      <p id="typingStatus" style="font-style:italic;"></p>
+      <input id="messageInput" placeholder="Type a message..." />
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
